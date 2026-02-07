@@ -7,15 +7,6 @@ Minimal setup that fills the display with a solid color.
     :caption: examples/displayio_quickstart.py
     :linenos:
 
-Simple test
------------
-
-Quick sanity test for basic display initialization.
-
-.. literalinclude:: ../examples/rm690b0_simpletest.py
-    :caption: examples/rm690b0_simpletest.py
-    :linenos:
-
 Basic shapes
 ------------
 

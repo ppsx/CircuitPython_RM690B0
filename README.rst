@@ -78,7 +78,6 @@ Examples
 The ``examples/`` folder includes:
 
 * ``examples/displayio_quickstart.py`` - minimal display initialization and color fill
-* ``examples/rm690b0_simpletest.py`` - quick basic sanity test
 * ``examples/basic_shapes.py`` - shape rendering with displayio helper libraries
 * ``examples/text_demo.py`` - text rendering examples
 * ``examples/game_demo.py`` - bitmap-based bouncing-ball demo
