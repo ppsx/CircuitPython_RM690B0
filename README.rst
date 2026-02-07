@@ -72,6 +72,18 @@ Usage Example
     bus = create_qspi_bus(board)
     display = RM690B0(bus, width=600, height=450)
 
+Examples
+========
+
+The ``examples/`` folder includes:
+
+* ``examples/displayio_quickstart.py`` - minimal display initialization and color fill
+* ``examples/rm690b0_simpletest.py`` - quick basic sanity test
+* ``examples/basic_shapes.py`` - shape rendering with displayio helper libraries
+* ``examples/text_demo.py`` - text rendering examples
+* ``examples/game_demo.py`` - bitmap-based bouncing-ball demo
+* ``examples/benchmark.py`` - display update performance benchmark
+
 Documentation
 =============
 API documentation for this library can be found on `Read the Docs <https://circuitpython-rm690b0.readthedocs.io/>`_.
