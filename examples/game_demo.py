@@ -309,6 +309,4 @@ except KeyboardInterrupt:
     print(f"Total frames: {frame_count}")
 finally:
     displayio.release_displays()
-    if bus:
-        bus.deinit()
     print("[OK] Cleanup complete")

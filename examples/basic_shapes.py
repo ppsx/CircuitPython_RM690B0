@@ -111,6 +111,4 @@ except KeyboardInterrupt:
     print("\n[INFO] Stopping...")
 finally:
     displayio.release_displays()
-    if bus:
-        bus.deinit()
     print("[OK] Cleanup complete")
