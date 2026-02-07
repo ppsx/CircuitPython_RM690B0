@@ -58,7 +58,7 @@ _INIT_SEQUENCE = (
 )
 
 
-class RM690B0(BusDisplay):
+class RM690B0(BusDisplay):  # pylint: disable=too-few-public-methods
     """
     RM690B0 AMOLED display driver.
 
@@ -82,7 +82,7 @@ class RM690B0(BusDisplay):
         display.refresh()
     """
 
-    def __init__(
+    def __init__(  # pylint: disable=too-many-arguments
         self,
         bus,
         *,
@@ -143,14 +143,14 @@ def create_qspi_bus(board_module, frequency=40_000_000):
         bus = create_qspi_bus(board)
         display = RM690B0(bus)
     """
-    import qspibus
+    import qspibus  # pylint: disable=import-outside-toplevel
 
     clock = _first_pin(board_module, "LCD_CLK", "QSPI_CLK", "DISPLAY_SCK")
     data0 = _first_pin(board_module, "LCD_D0", "QSPI_D0", "DISPLAY_D0")
     data1 = _first_pin(board_module, "LCD_D1", "QSPI_D1", "DISPLAY_D1")
     data2 = _first_pin(board_module, "LCD_D2", "QSPI_D2", "DISPLAY_D2")
     data3 = _first_pin(board_module, "LCD_D3", "QSPI_D3", "DISPLAY_D3")
-    cs = _first_pin(board_module, "LCD_CS", "QSPI_CS", "DISPLAY_CS")
+    chip_select = _first_pin(board_module, "LCD_CS", "QSPI_CS", "DISPLAY_CS")
 
     # Optional pins
     reset = None
@@ -165,7 +165,7 @@ def create_qspi_bus(board_module, frequency=40_000_000):
         data1=data1,
         data2=data2,
         data3=data3,
-        cs=cs,
+        cs=chip_select,
         reset=reset,
         frequency=frequency,
     )
