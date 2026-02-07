@@ -50,7 +50,9 @@ def main():  # pylint: disable=too-many-locals,too-many-branches,too-many-statem
         mem_before = gc.mem_free()  # pylint: disable=no-member
 
         bitmap = displayio.Bitmap(600, 450, 65536)
-        converter = displayio.ColorConverter(input_colorspace=displayio.Colorspace.RGB565)
+        converter = displayio.ColorConverter(
+            input_colorspace=displayio.Colorspace.RGB565
+        )
         tilegrid = displayio.TileGrid(bitmap, pixel_shader=converter)
         group = displayio.Group()
         group.append(tilegrid)

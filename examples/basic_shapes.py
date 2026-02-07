@@ -82,20 +82,12 @@ splash.append(line2)
 
 # Text labels
 text1 = label.Label(
-    terminalio.FONT,
-    text="RM690B0 DISPLAYIO",
-    color=0xFFFFFF,
-    x=410,
-    y=220
+    terminalio.FONT, text="RM690B0 DISPLAYIO", color=0xFFFFFF, x=410, y=220
 )
 splash.append(text1)
 
 text2 = label.Label(
-    terminalio.FONT,
-    text="BASIC SHAPES",
-    color=0xFFA500,  # Orange
-    x=410,
-    y=236
+    terminalio.FONT, text="BASIC SHAPES", color=0xFFA500, x=410, y=236  # Orange
 )
 splash.append(text2)
 

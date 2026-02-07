@@ -67,21 +67,11 @@ game.append(canvas_sprite)
 
 # Text labels (overlaid on canvas)
 score_label = label.Label(
-    terminalio.FONT,
-    text="SCORE 0000",
-    color=0x00FFFF,
-    x=16,
-    y=16
+    terminalio.FONT, text="SCORE 0000", color=0x00FFFF, x=16, y=16
 )
 game.append(score_label)
 
-fps_label = label.Label(
-    terminalio.FONT,
-    text="FPS: --",
-    color=0xFFFF00,
-    x=16,
-    y=32
-)
+fps_label = label.Label(terminalio.FONT, text="FPS: --", color=0xFFFF00, x=16, y=32)
 game.append(fps_label)
 
 # Show initial state
@@ -132,8 +122,12 @@ display.refresh()
 # Draw initial objects
 ball_sprite_x = int(ball_x - ball_r - 2)
 ball_sprite_y = int(ball_y - ball_r - 2)
-bitmaptools.blit(canvas, ball_sprite, ball_sprite_x, ball_sprite_y, skip_source_index=0x0000)
-bitmaptools.blit(canvas, paddle_sprite, paddle_x - 2, paddle_y - 2, skip_source_index=0x0000)
+bitmaptools.blit(
+    canvas, ball_sprite, ball_sprite_x, ball_sprite_y, skip_source_index=0x0000
+)
+bitmaptools.blit(
+    canvas, paddle_sprite, paddle_x - 2, paddle_y - 2, skip_source_index=0x0000
+)
 display.refresh()
 
 print("Game started!")

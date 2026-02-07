@@ -44,42 +44,26 @@ t_start = time.monotonic()
 
 # Title
 text1 = label.Label(
-    terminalio.FONT,
-    text="RM690B0 DISPLAYIO TEXT",
-    color=0xFFFFFF,
-    x=40,
-    y=40
+    terminalio.FONT, text="RM690B0 DISPLAYIO TEXT", color=0xFFFFFF, x=40, y=40
 )
 splash.append(text1)
 
 # Numbers
 text2 = label.Label(
-    terminalio.FONT,
-    text="0123456789",
-    color=0xFFFF00,  # Yellow
-    x=40,
-    y=72
+    terminalio.FONT, text="0123456789", color=0xFFFF00, x=40, y=72  # Yellow
 )
 splash.append(text2)
 
 # Status message
 text3 = label.Label(
-    terminalio.FONT,
-    text="DISPLAY READY",
-    color=0x00FFFF,  # Cyan
-    x=40,
-    y=104
+    terminalio.FONT, text="DISPLAY READY", color=0x00FFFF, x=40, y=104  # Cyan
 )
 splash.append(text3)
 
 # Multiline text
 # Note: Label supports \n for line breaks
 text4 = label.Label(
-    terminalio.FONT,
-    text="LINE 1\nLINE 2\nLINE 3",
-    color=0x00FF00,  # Green
-    x=40,
-    y=150
+    terminalio.FONT, text="LINE 1\nLINE 2\nLINE 3", color=0x00FF00, x=40, y=150  # Green
 )
 splash.append(text4)
 
@@ -95,11 +79,7 @@ colors = [
 
 for i in range(6):
     text = label.Label(
-        terminalio.FONT,
-        text=f"COUNT {i}",
-        color=colors[i],
-        x=360,
-        y=40 + i * 18
+        terminalio.FONT, text=f"COUNT {i}", color=colors[i], x=360, y=40 + i * 18
     )
     splash.append(text)
 
